@@ -1,0 +1,95 @@
+<div class="login-box" ng-controller="AuthCtrl as auth">
+   <div><img src="/assets/imgs/moto2.png" class="authImage"></div>
+   <div class="login-logo">
+      <a href="#!">
+         <b> Motos</b> BR
+      </a>
+   </div>
+   <div class="login-box-body">
+      <p class="login-box-msg">Welcome!</p>
+      <form>
+         <auth-field id="authName" model="auth.user.name" type="input"
+            placeholder="Name" hide="auth.loginMode"></auth-field>
+         <auth-field id="authEmail" model="auth.user.email" type="email"
+            placeholder="E-mail"></auth-field>
+         <auth-field id="authPass" model="auth.user.password" type="password"
+            placeholder="Password"></auth-field>
+         <auth-field id="authConfirmPass" model="auth.user.confirm_password"
+            type="password"
+            placeholder="Confirm password" hide="auth.loginMode">
+         </auth-field>
+         <auth-field id="authKey" model="auth.user.key" type="password"
+            placeholder="Private key" hide="auth.loginMode"></auth-field>
+         <div class="row">
+            <div class="col-sm-6">
+               <button class="btn btn-primary btn-block btn-flat"
+                  ng-click="auth.login()" ng-show="auth.loginMode"
+                  >Login
+               </button>
+               <button class="btn btn-primary btn-block btn-flat"
+                  ng-click="auth.signup()" ng-hide="auth.loginMode"
+                  >Sign up
+               </button>
+            </div>
+            <div class="col-sm-6">
+               <button class="btn btn-primary btn-block btn-flat"
+                  ng-click="auth.changeMode()" ng-show="auth.loginMode"
+                  >Register
+               </button>
+               <button class="btn btn-primary btn-block btn-flat"
+                  ng-click="auth.changeMode()" ng-hide="auth.loginMode"
+                  >Close
+               </button>
+            </div>
+         </div>
+      </form>
+      <br/>
+      <a href="javascript:;" ng-click="auth.forgotPassword()" ng-hide="!(auth.loginMode)">
+         Forgot you password?
+      </a>
+      <a href="javascript:;" ng-click="auth.changeMode()" ng-hide="auth.loginMode">
+         Are you already registered? Login here!
+      </a>
+   </div>
+   
+   <!-- Modal -->
+   <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal">&times;</button>
+               <center >
+                  <h3><i class="fa fa-lock fa-4x"></i></h3>
+                  <h2 class="text-center">Forgot Password?</h2>
+                  <p>You can reset your password here.</p>
+               </center>
+            </div>
+            <div class="panel-body">
+              <form id="register-form" role="form" autocomplete="off" class="form" ng-submit="auth.sendEmail()">
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                    <input id="email" name="email" placeholder="email address" class="form-control" type="email" autocomplete="on">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input id="btnReset" name="recover-submit" class="btn btn-lg btn-primary btn-block btn-flat" value="Reset Password" type="submit">
+                </div>
+              </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<footer class="" ng-include="'../template/website/footer/footer.html'"></footer>
+
+<style>
+   html, .wrapper { background-color: #fff!important; }
+   .login-box-body { background-color: #eee; }
+   .modal .modal-dialog {
+      max-width: 400px;
+   }
+   .path-site {
+      color: #26a69a;
+   }
+</style>
