@@ -3,5 +3,5 @@ angular.module('motorcycleBR', [
   'ui.bootstrap',
   'ngTouch',
   'ngAnimate',
-  'toastr'
-])
+  'toastr']
+);
