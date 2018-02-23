@@ -29,7 +29,7 @@ gulp.task('deps.css', () => {
     'node_modules/admin-lte/dist/css/AdminLTE.min.css',
     'node_modules/admin-lte/dist/css/skins/_all-skins.min.css',
   ])
-  .pipe(uglifycss({ "uglyComments": true }))
+  .pipe(uglifycss({'uglyComments': true}))
   .pipe(concat('deps.min.css'))
   .pipe(gulp.dest('public/assets/css'));
 });
@@ -37,7 +37,6 @@ gulp.task('deps.css', () => {
 gulp.task('deps.fonts', () => {
   return gulp.src([
     'node_modules/font-awesome/fonts/*.*',
-    'node_modules/admin-lte/bootstrap/fonts/*.*'
-  ])
-  .pipe(gulp.dest('publc/assets/fonts'));
+    'node_modules/admin-lte/bootstrap/fonts/*.*'e])
+  .pipe(gulp.dest('public/assets/fonts'));
 });
