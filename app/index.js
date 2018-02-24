@@ -1,4 +1,6 @@
-angular.module('motorcycleBR', [
+'use strict';
+
+angular.module('moto-app', [
   'ui.router',
   'ui.bootstrap',
   'ngTouch',
