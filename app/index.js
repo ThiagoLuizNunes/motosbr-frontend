@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('moto-app', [
+angular.module('motos-app', [
   'ui.router',
   'ngAnimate',
   // 'ngTouch',
