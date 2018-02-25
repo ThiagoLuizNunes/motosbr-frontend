@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<html ng-app="moto-app">
+<html ng-app="motos-app">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
@@ -8,11 +8,8 @@
     <link rel="stylesheet" href="/assets/css/deps.min.css">
     <link rel="stylesheet" href="/assets/css/app.min.css">
   </head>
-    <header class="main-header" ng-include="'template/header.html'"></header>
-    <aside class="main-sidebar" ng-include="'template/menu.html'"></aside>
-    <div class="content-wrapper" ui-view></div>
-    <footer class="main-footer" ng-include="'template/footer.html'"></footer>
-    <!-- <ui-view></ui-view> -->
+
+    <ui-view></ui-view>
 
   <script src="/assets/js/deps.min.js"></script>
   <script src="/assets/js/app.min.js"></script>
