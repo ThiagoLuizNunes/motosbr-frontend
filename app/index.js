@@ -2,8 +2,8 @@
 
 angular.module('moto-app', [
   'ui.router',
-  'ui.bootstrap',
-  'ngTouch',
   'ngAnimate',
+  // 'ngTouch',
+  // 'ui.bootstrap',
   'toastr']
 );
