@@ -3,7 +3,7 @@
 angular.module('motos-app', [
   'ui.router',
   'ngAnimate',
-  // 'ngTouch',
+  'ngTouch',
   // 'ui.bootstrap',
   'toastr']
 );
