@@ -1,0 +1,17 @@
+#toast-container {top: 70px;}
+
+.main-footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  margin-top: 20px;
+}
+.table-actions {width: 140px;}
+.searchClass {margin-bottom: 20px}
+.authImage {
+  width: 55%;
+  height: 70%;
+  display: block;
+  margin: auto;
+  margin-bottom: 15px;
+}
