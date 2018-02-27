@@ -41,7 +41,7 @@
         }
       });
     };
-   
+
     vm.forgotPassword = () => {
       $('#myModal').modal('show');
     };
@@ -54,6 +54,5 @@
         msgs.addError('Email address invalid!');
       }
     };
-
   }
 })();

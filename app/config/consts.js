@@ -12,6 +12,9 @@
       // apiUrl: 'https://motosbr.herokuapp.com/api',
       // oapiUrl: 'https://motosbr.herokuapp.com',
       userKey: '_motorcycle_app_user'})
-    .run(['$rootScope', 'consts', function($rootScope, consts) {
-      $rootScope.consts = consts}]);
+    .run(['$rootScope', 'consts', runConsts]);
+
+  function runConsts(rootScope, consts) {
+    $rootScope.consts = consts;
+  }
 })();
