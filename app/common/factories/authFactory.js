@@ -1,11 +1,9 @@
 (function() {
   angular
     .module('motos-app')
-    .factory('auth', [
-      '$http',
-      'consts',
-      'msgs',
-      AuthFactory]);
+    .factory('auth', AuthFactory);
+
+  AuthFactory.$inject = ['$http', 'consts', 'msgs'];
 
   function AuthFactory($http, consts, msgs) {
     let user = null;
