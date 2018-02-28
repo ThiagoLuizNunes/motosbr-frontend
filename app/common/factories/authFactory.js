@@ -5,7 +5,8 @@
     .module('motos-app')
     .factory('auth', AuthFactory);
 
-  AuthFactory.$inject = ['$http', 'consts', 'msgs'];
+  AuthFactory.$inject =
+    ['$http', 'consts', 'msgs'];
 
   function AuthFactory($http, consts, msgs) {
     let user = null;

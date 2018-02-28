@@ -5,7 +5,8 @@
     .module('motos-app')
     .controller('AuthCtrl', AuthController);
 
-  AuthController.$inject = ['$location', 'msgs', 'auth', 'consts'];
+  AuthController.$inject =
+    ['$location', 'msgs', 'auth', 'consts'];
 
   function AuthController($location, msgs, auth) {
     const vm = this;
