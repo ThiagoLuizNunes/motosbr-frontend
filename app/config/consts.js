@@ -14,7 +14,7 @@
       userKey: '_motorcycle_app_user'})
     .run(['$rootScope', 'consts', runConsts]);
 
-  function runConsts(rootScope, consts) {
+  function runConsts($rootScope, consts) {
     $rootScope.consts = consts;
   }
 })();
