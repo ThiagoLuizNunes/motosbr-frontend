@@ -6,7 +6,7 @@
     .factory('sort', SortFactory );
 
   function SortFactory() {
-    function Data(data) {
+    function sortData(data) {
       data.sort(function(a, b) {
         let nameA = a.name.toLowerCase();
         let nameB = b.name.toLowerCase();
@@ -21,6 +21,6 @@
       });
       return data;
     }
-    return {Data};
+    return {sortData};
   }
 })();

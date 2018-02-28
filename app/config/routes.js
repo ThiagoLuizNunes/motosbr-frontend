@@ -41,21 +41,21 @@
         views: {
           'view-motos@motos': {
             templateUrl: 'template/website/views/comparation.html'}}})
-      // .state('admin', {
-      //   url: '/admin',
-      //   views: {
-      //     'view-admin@admin': {
-      //       templateUrl: 'template/admin/dashboard/dashboard.html'}}})
-      // .state('dashboard', {
-      //   parent: 'admin',
-      //   views: {
-      //     'view-admin@admin': {
-      //       templateUrl: 'template/admin/dashboard/dashboard.html'}}})
-      // .state('motorcycle', {
-      //   parent: 'admin',
-      //   views: {
-      //     'view-admin@admin': {
-      //       templateUrl: 'template/admin/motorcycle/tabs.html'}}})
+      .state('admin', {
+        url: '/admin',
+        views: {
+          'view-admin@admin': {
+            templateUrl: 'template/admin/dashboard/dashboard.html'}}})
+      .state('dashboard', {
+        parent: 'admin',
+        views: {
+          'view-admin@admin': {
+            templateUrl: 'template/admin/dashboard/dashboard.html'}}})
+      .state('motorcycle', {
+        parent: 'admin',
+        views: {
+          'view-admin@admin': {
+            templateUrl: 'template/admin/motorcycle/tabs.html'}}})
       .state('auth', {
         url: '/auth',
         templateUrl: 'template/admin/auth/auth.html'});
